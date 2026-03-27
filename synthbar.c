@@ -263,6 +263,7 @@ int main(int argc, char *argv[]) {
     goto end;
 
 end:
+    {
     double t2 = get_current_time();
 
     // Clean up
@@ -276,4 +277,5 @@ end:
     fprintf(stderr, "[synthbar:%s] %u reads processed in %.3f seconds (wall time)\n", __func__, read_count, t2-t1);
 
     return ret_code;
+    }
 }
